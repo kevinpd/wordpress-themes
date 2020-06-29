@@ -1,18 +1,20 @@
 <?php  /*  Theme Supports  */
     add_theme_support('title-tag');
 
-    add_theme_support('customer-logo', 
+    add_theme_support('custom-logo', 
         array(
             'flex-height' => true,
             'flex-width' => true,
         )
     );
 
+    add_theme_support('menus');
+
     /*  Enqueue Styles  */
-    function trial_register_styles() {
+    function register_styles() {
         wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css');
     }
-    add_action('wp_enqueue_scripts', 'trial_register_styles');
+    add_action('wp_enqueue_scripts', 'register_styles');
 
     /*  Enqueue Scripts  */
 
